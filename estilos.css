@@ -70,22 +70,22 @@ div.camada {
 }
 
 div#predios {
-  background-image: url('imagens/predios.svg');
+  background-image: url('predios.svg');
   animation: moverPredios 43s infinite linear;
 }
 
 div#nevoa {
-  background-image: url('imagens/nevoa.svg');
+  background-image: url('nevoa.svg');
   animation: moverNevoa 21s infinite linear;
 }
 
 div#cidade {
-  background-image: url('imagens/cidade.svg');
+  background-image: url('cidade.svg');
   animation: moverCidade 15s infinite linear;
 }
 
 div#cerca {
-  background-image: url('imagens/cerca.svg');
+  background-image: url('cerca.svg');
   animation: moverCerca 7s infinite linear;
 }
 
