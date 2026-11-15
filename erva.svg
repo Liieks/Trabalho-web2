@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-24 -24 48 48">
+  <defs><radialGradient id="brilho"><stop offset=".1" stop-color="#4cc15a" stop-opacity=".5"/><stop offset="1" stop-color="#4cc15a" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="0" cy="0" r="24" fill="url(#brilho)"/>
+  <line x1="0" y1="12" x2="0" y2="-2" stroke="#2a7a34" stroke-width="3"/>
+  <g transform="translate(0 -2) rotate(-52)"><ellipse cx="0" cy="-9" rx="5" ry="10" fill="#4cc15a"/><ellipse cx="-1" cy="-11" rx="1.5" ry="5" fill="#9be59f"/></g><g transform="translate(0 -2) rotate(0)"><ellipse cx="0" cy="-9" rx="5" ry="10" fill="#4cc15a"/><ellipse cx="-1" cy="-11" rx="1.5" ry="5" fill="#9be59f"/></g><g transform="translate(0 -2) rotate(52)"><ellipse cx="0" cy="-9" rx="5" ry="10" fill="#4cc15a"/><ellipse cx="-1" cy="-11" rx="1.5" ry="5" fill="#9be59f"/></g>
+</svg>

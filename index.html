@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobreviva em Raccoon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+  </head>
+
+  <body>
+    <h1 id="titulo">Sobreviva em <span>Raccoon City</span></h1>
+
+    <div id="tela">
+      <img src="imagens/lua.svg" id="lua" alt="">
+      <div class="camada" id="predios"></div>
+      <div class="camada" id="nevoa"></div>
+      <div class="camada" id="cidade"></div>
+      <div class="camada" id="cerca"></div>
+      <div id="solo"></div>
+
+      <img src="imagens/leon.svg" id="personagem" alt="Policial">
+      <img src="imagens/zumbi.svg" id="zumbi" alt="Infectado">
+      <img src="imagens/barricada.svg" id="barricada" alt="Barricada de arame farpado">
+      <img src="imagens/erva.svg" id="erva" alt="Erva verde">
+
+      <div id="painel">
+        <div>Ervas <span id="contador">0</span></div>
+        <div id="painelTempo">Tempo <span id="relogio">60</span></div>
+      </div>
+
+      <div id="inicio">
+        <p>A cidade caiu. Você tem 60 segundos para juntar o máximo de ervas verdes. Pise na cabeça dos infectados para eliminá-los e pule as barricadas para não ser pego pelos zumbis.</p>
+        <button id="botaoIniciar">Iniciar</button>
+      </div>
+
+      <div id="fimDeJogo">
+        <h1>Game Over</h1>
+        <p id="motivo"></p>
+        <p>Ervas coletadas: <span id="resultado">0</span></p>
+        <button id="botaoReiniciar">Reiniciar</button>
+      </div>
+    </div>
+
+    <p id="ajuda">Espaço, ↑ ou toque na tela para pular &middot; M liga e desliga o som</p>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

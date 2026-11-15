@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0709;
+  color: #eadfd4;
+  font-family: 'Special Elite', 'Courier New', monospace;
+  padding: 16px;
+}
+
+h1#titulo {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 28px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+h1#titulo span {
+  color: #e3262f;
+}
+
+p#ajuda {
+  text-align: center;
+  color: #a08f8a;
+  margin-top: 12px;
+}
+
+div#tela {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  height: 500px;
+  margin: auto;
+  background: linear-gradient(#07040a, #26101b 55%, #5a1a1e 84%, #2a0d12);
+  overflow: hidden;
+  user-select: none;
+}
+
+
+div#tela::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 140px 50px rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+}
+
+img#lua {
+  position: absolute;
+  top: -20px;
+  right: 10%;
+  width: 260px;
+  max-width: 50%;
+}
+
+
+div.camada {
+  position: absolute;
+  left: 0;
+  bottom: 80px;
+  width: 100%;
+  height: 420px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+}
+
+div#predios {
+  background-image: url('imagens/predios.svg');
+  animation: moverPredios 43s infinite linear;
+}
+
+div#nevoa {
+  background-image: url('imagens/nevoa.svg');
+  animation: moverNevoa 21s infinite linear;
+}
+
+div#cidade {
+  background-image: url('imagens/cidade.svg');
+  animation: moverCidade 15s infinite linear;
+}
+
+div#cerca {
+  background-image: url('imagens/cerca.svg');
+  animation: moverCerca 7s infinite linear;
+}
+
+div#solo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: url('imagens/chao.svg') repeat-x;
+  animation: moverChao 0.32s infinite linear;
+}
+
+@keyframes moverPredios {
+  from { background-position-x: 0; }
+  to { background-position-x: -1920px; }
+}
+
+@keyframes moverNevoa {
+  from { background-position-x: 0; }
+  to { background-position-x: -1600px; }
+}
+
+@keyframes moverCidade {
+  from { background-position-x: 0; }
+  to { background-position-x: -1800px; }
+}
+
+@keyframes moverCerca {
+  from { background-position-x: 0; }
+  to { background-position-x: -1500px; }
+}
+
+@keyframes moverChao {
+  from { background-position-x: 0; }
+  to { background-position-x: -96px; }
+}
+
+img#personagem {
+  position: absolute;
+  left: 120px;
+  bottom: 80px;
+  height: 105px;
+}
+
+.pulo {
+  animation: animacaoPulo 700ms;
+}
+
+@keyframes animacaoPulo {
+  0% { bottom: 80px; animation-timing-function: ease-out; }
+  50% { bottom: 250px; animation-timing-function: ease-in; }
+  100% { bottom: 80px; }
+}
+
+img#personagem.morto {
+  animation: none;
+  transform-origin: bottom center;
+  transform: translateY(-33px) rotate(90deg);
+}
+
+img#zumbi {
+  position: absolute;
+  left: 100%;
+  bottom: 80px;
+  height: 99px;
+}
+
+img#barricada {
+  position: absolute;
+  left: 100%;
+  bottom: 80px;
+  height: 84px;
+}
+
+img#erva {
+  position: absolute;
+  left: 100%;
+  bottom: 110px;
+  width: 48px;
+  animation: flutuar 1s infinite ease-in-out alternate;
+}
+
+@keyframes flutuar {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}
+
+
+div#tela.parado * {
+  animation-play-state: paused;
+}
+
+div#painel {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+div#painel div {
+  background: rgba(10, 5, 8, 0.65);
+  padding: 8px 14px;
+  border-left: 3px solid #4cc15a;
+}
+
+div#painel div#painelTempo {
+  border-left: none;
+  border-right: 3px solid #e3262f;
+}
+
+div#painel span {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 900;
+  font-size: 26px;
+  margin-left: 6px;
+}
+
+div#painelTempo.urgente span {
+  color: #e3262f;
+}
+
+div#inicio, div#fimDeJogo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(5, 1, 3, 0.85);
+  font-size: 18px;
+}
+
+div#inicio p {
+  max-width: 460px;
+}
+
+div#fimDeJogo {
+  display: none;
+}
+
+div#fimDeJogo h1 {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 900;
+  font-size: clamp(40px, 10vw, 90px);
+  text-transform: uppercase;
+  color: #e3262f;
+  text-shadow: 0 3px 0 #3a0508, 0 0 30px rgba(227, 38, 47, 0.5);
+}
+
+div#fimDeJogo span {
+  color: #4cc15a;
+  font-size: 24px;
+}
+
+button {
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #eadfd4;
+  background: #b3121c;
+  border: 1px solid #ff5a62;
+  padding: 12px 28px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e3262f;
+}
